@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #fdfdfd;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* ===== Form Page ===== */
+.page-wrapper.form-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* ===== Dashboard Page ===== */
+.dashboard-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.dashboard-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: #222;
+  margin-bottom: 3rem;
+  letter-spacing: -0.01em;
+}
+
+.dashboard-status {
+  text-align: center;
+  color: #6b7280;
+  font-size: 1rem;
+  padding: 3rem 0;
+}
+
+.dashboard-error {
+  color: #ef4444;
+}
+
+.dashboard-empty {
+  text-align: center;
+  padding: 3rem 0;
+  color: #6b7280;
+}
+
+/* ===== Cards Grid ===== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* ===== Card ===== */
+.card {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 0.25rem;
+}
+
+.card-email {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1.25rem;
+  word-break: break-all;
+}
+
+.card-message {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.5;
+  background: #fafafa;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+/* ===== Dashboard Nav ===== */
+.dashboard-nav {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.back-link {
+  display: inline-block;
+  color: #7e22ce;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 10px;
+  background: #faf5ff;
+  transition: all 0.2s ease;
+}
+
+.back-link:hover {
+  background: #f3e8ff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-title {
+    font-size: 1.35rem;
+  }
+}
