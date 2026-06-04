@@ -1,0 +1,24 @@
+GET http://localhost:3000/form-api/forms
+### 
+POST http://localhost:3000/form-api/forms
+Content-Type: application/json 
+
+{
+    "name":132,
+    "email" : "kiranaaa",
+    "message":20000
+
+}
+###
+PUT http://localhost:3000/form-api/forms/objectid
+Content-Type: application/json 
+
+{
+    "name":132,
+    "email" : "kiranaaa",
+    "message":20000
+}
+
+###
+
+DELETE  http://localhost:3000/form-api/forms/objectid
