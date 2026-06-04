@@ -16,15 +16,18 @@ formapp.get("/forms",async(req,res)=>{
     const  formList = await  formModel.find()
     res.status(200).json({message:"created",payLoad:formList})
     });
-
-
+ 
+// to delete the form 
 formapp.delete("/forms/:id", async (req,res)=>{
+        const deletedform = await formModel.findByIdAndDelete(req.params.id)
+        res.json({message:"form deleted successfully",payload:deletedform})
+})   
 
-    
-
-        const deletedform = await productModel.findByIdAndDelete(req.params.id)
-
-        res.json({
-            message:"Product deleted successfully",
-            payload:deletedform})
-}) 
+// to uadate the form 
+formapp.put("/forms/:id",async(req,res)=>  
+{// get modififed user from req
+    const  modifiedform = req.body;
+    const uid = req.params.id;
+   const updatedform = await  formModel.findByIdAndUpdate(uid,{$set:{...modifiedform}},{new : true , runValidators:true},) ;//pervious object 
+ res.status(200).json({message:"user modified",payLoad:updatedform}) ;
+})

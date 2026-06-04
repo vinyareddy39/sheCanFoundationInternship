@@ -5,20 +5,20 @@ Content-Type: application/json
 
 {
     "name":132,
-    "email" : "kiranaaa",
-    "message":20000
+    "email" : "kiranaaa@gmail.com",
+    "message":"the message is meaasge"
 
 }
 ###
-PUT http://localhost:3000/form-api/forms/objectid
+PUT http://localhost:3000/form-api/forms/6a216828766aa24793a99b84
 Content-Type: application/json 
 
 {
     "name":132,
     "email" : "kiranaaa",
-    "message":20000
+    "message":"the message is vidya"
 }
 
 ###
 
-DELETE  http://localhost:3000/form-api/forms/objectid
+DELETE  http://localhost:3000/form-api/forms/6a216828766aa24793a99b84

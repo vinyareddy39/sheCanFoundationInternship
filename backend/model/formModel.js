@@ -1,5 +1,5 @@
 import {Schema,model} from 'mongoose'
-const fromSchema = new schema({
+const formSchema = new Schema({
 
     name: {
         type:String,
@@ -15,4 +15,4 @@ const fromSchema = new schema({
     }
 
 });
-export const fromModel = model("form",fromSchema)
+export const formModel = model("form",formSchema)
